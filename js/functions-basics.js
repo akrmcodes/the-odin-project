@@ -10,4 +10,35 @@ function showReceipt (){
 console.log(`المبلغ الإجمالي للدفع هو: ${showReceipt()}`)
 
 
-// ----------------------------------------------------
+// ---------------------------------------------------- refacor this ?
+function checkAccess(isLoggedIn, isBanned, role) {
+  if (isLoggedIn === true && isBanned === false && role === "admin") {
+    if (isBanned === false) {
+      if (role === "admin") {
+        return "مرحباً بك في لوحة تحكم الإدارة";
+      } else if (role === "user") {
+        return "مرحباً بك في ملفك الشخصي";
+      } else {
+        return "صلاحية غير معروفة";
+      }
+    } else {
+      return "حسابك محظور من المنصة";
+    }
+  } else {
+    return "الرجاء تسجيل الدخول أولاً";
+  }
+}
+// --------------------------------------------------first
+function checkAccess(isLoggedIn, isBanned, role) {
+  if (isLoggedIn === true && isBanned === false && role === "admin") {
+        return "مرحباً بك في لوحة تحكم الإدارة";
+  }
+  
+  if (isBanned === true){
+      return "حسابك محظور من المنصة";
+    }
+    else if (isBanned === false || role === "user") {
+          return "مرحباً بك في ملفك الشخصي";
+        }
+    return "الرجاء تسجيل الدخول أولاً";
+}
