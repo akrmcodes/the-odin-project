@@ -114,3 +114,13 @@ function lastLetter(text2){
   let lastLetter = text.lenght - 1;
   return text2[lastLetter];
 }
+
+// -----------------------------------------ai challange
+function addNumbersA(a, b) {
+  return a + b;
+}
+
+let resultA = addNumbersA(5, 5);
+let finalA = resultA * 2;
+
+console.log(finalA)
