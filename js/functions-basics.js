@@ -53,3 +53,11 @@ function checkAccess(isLoggedIn, isBanned, role) {
     }
     return "الرجاء تسجيل الدخول أولاً";
 }
+// ------------------------the best whay
+function checkAccess(isLoggedIn, isBanned, role) {
+if (!isLoggedIn) return "الرجاء تسجيل الدخول أولاً"
+if (isBanned)    return "حسابك محظور من المنصة";
+if (role === "admin") return "مرحباً بك في لوحة تحكم الإدارة"
+if (role === "user") return "مرحباً بك في ملفك الشخصي"
+return "الرجاء تسجيل الدخول أولاً";
+}
