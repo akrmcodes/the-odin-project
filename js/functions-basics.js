@@ -95,3 +95,22 @@ ask(true ,callManager(),callSecrtary());
 let sendWelcomeEmail = userName => `تم إرسال رسالة الترحيب إلى: ${userName}`;
 
 sendWelcomeEmail("akrm");
+// ---------------------------------------------odin project assignment
+function add7 (num) {
+ return num+7;
+}
+console.log(add7(10));
+
+let multiply = (num1 , num2) => num1 * num2;
+console.log(multiply(2,3));
+
+function capitalize(text) {
+  let firstLetter = text[0].toUpperCase();
+  let restOfString = text.slice(1).toLowerCase();
+  return firstLetter+restOfString
+}
+
+function lastLetter(text2){
+  let lastLetter = text.lenght - 1;
+  return text2[lastLetter];
+}
