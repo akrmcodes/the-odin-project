@@ -42,3 +42,14 @@ function checkAccess(isLoggedIn, isBanned, role) {
         }
     return "الرجاء تسجيل الدخول أولاً";
 }
+// -------------------------------------- second
+function checkAccess(isLoggedIn, isBanned, role) {
+  if (isLoggedIn === true && isBanned === false && role === "admin" || role === "user") {
+        return role === "admin" ? "مرحباً بك في لوحة تحكم الإدارة" : "مرحباً بك في ملفك الشخصي";
+  }
+  
+  if (isBanned === true){
+      return "حسابك محظور من المنصة";
+    }
+    return "الرجاء تسجيل الدخول أولاً";
+}
