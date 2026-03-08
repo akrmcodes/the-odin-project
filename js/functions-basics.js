@@ -86,3 +86,12 @@ function ask (isArrive , showSucess , showError){
     return showError;
 }
 ask(true ,callManager(),callSecrtary());
+
+// ---------------------------------------------Arrow function
+// let sendWelcomeEmail = function(userName) {
+//   return "تم إرسال رسالة الترحيب إلى: " + userName;
+// };
+
+let sendWelcomeEmail = userName => `تم إرسال رسالة الترحيب إلى: ${userName}`;
+
+sendWelcomeEmail("akrm");
