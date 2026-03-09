@@ -7,3 +7,8 @@ function getComputerChoice(){
     else
         return "scissors"
 }
+
+function getHumanChoice(){
+    let humanChoice = prompt("Type Your Choice", "rock")
+    return humanChoice.toLowerCase();
+}
