@@ -2,10 +2,10 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice(){
-    let computerChoice = Math.floor(Math.random() * 10);
-    if (computerChoice <= 3)
+    let computerChoice = Math.floor(Math.random() * 3);
+    if (computerChoice === 0)
         return "rock"
-    else if(computerChoice >3 && computerChoice <= 6)
+    else if(computerChoice === 1)
         return "paper"
     else
         return "scissors"
@@ -16,15 +16,15 @@ function getHumanChoice(){
     return humanChoice.toLowerCase();
 }
 
-function incressHumanScure() {
+function increaseHumanScore() {
     console.log ("human Wins");
     humanScore +=1;
 }
-function incressComputerScure() {
+function increaseComputerScore() {
     console.log ("computer Wins");
     computerScore +=1;
 }
-function incressForBoth() {
+function increaseForBoth() {
     console.log ("It'sDraw");
     computerScore +=1;
     humanScore +=1;
@@ -35,27 +35,29 @@ function playRound(human , computer) {
     human === 'paper' && computer === 'rock' ||
     human === 'scissors' && computer === 'paper'||
     human === 'rock' && computer === 'scissors';
-    const drow = human === computer;
-    if (drow)
-        return incressForBoth()
+    const draw = human === computer;
+    if (draw)
+        return increaseForBoth()
     else if (humanWin)
-        return incressHumanScure()
+        return increaseHumanScore()
     else
-        return incressComputerScure()
+        return increaseComputerScore()
 }
 
 function playGame() {
-    for(i=1;i<=5;i++)
+    for(let i=1;i<=5;i++)
     {
         console.log(playRound(getHumanChoice(),getComputerChoice()));
     }
+    console.log(`Computer Score: ${computerScore}\n Human Score ${humanScore}`);
+    
+    if (humanScore > computerScore) {
+    console.log("Human Wins!");
+    } else if (computerScore > humanScore) {
+        console.log("Computer Wins!");
+    } else {
+        console.log("It's a Tie Game!");
+}
 }
 
 playGame();
-
-console.log(`Cumputer Score: ${computerScore}\n Human Score ${humanScore}`);
-
-if (humanScore > computerScore)
-console.log(`Human Wins`)
-else
-console.log("Computer Wins")
