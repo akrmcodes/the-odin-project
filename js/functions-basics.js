@@ -144,3 +144,17 @@ else {
     console.log(i);
 }
 }
+
+// ----------------------------------debuging
+// 1. تسجيل اسم العميل
+let customerName = "علي";
+
+// 2. دالة حساب إجمالي الدين
+function calculateDebt(oldDebt, newPurchase) {
+  let total = oldDebt + newPurchase;
+  return total;
+}
+
+// 3. تأكيد الحفظ
+let saveRecord = "تم حفظ الدين في السجل بنجاح";
+saveRecord;
