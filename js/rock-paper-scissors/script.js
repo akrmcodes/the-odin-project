@@ -16,21 +16,32 @@ function getHumanChoice(){
     return humanChoice.toLowerCase();
 }
 
+function incressHumanScure() {
+    console.log ("human Wins");
+    humanScore +=1;
+}
+function incressComputerScure() {
+    console.log ("computer Wins");
+    computerScore +=1;
+}
+function incressForBoth() {
+    console.log ("It'sDraw");
+    computerScore +=1;
+    humanScore +=1;
+}
+
 function playRound(human , computer) {
-    const humanBeatsRock = human === 'paper' && computer === 'rock';
-    const humanBeatsPaper = human === 'scissors' && computer === 'paper';
-    const humanBeatsScissors = human === 'rock' && computer === 'scissors';
+    const humanWin = 
+    human === 'paper' && computer === 'rock' ||
+    human === 'scissors' && computer === 'paper'||
+    human === 'rock' && computer === 'scissors';
     const drow = human === computer;
     if (drow)
-        return "It'sDraw"
-    else if (humanBeatsRock)
-        return "human Wins" 
-    else if (humanBeatsPaper)
-        return "human Wins"
-    else if (humanBeatsScissors)
-        return "human Wins"
+        return incressForBoth()
+    else if (humanWin)
+        return incressHumanScure()
     else
-        return "copmuter Wins"
+        return incressComputerScure()
 }
 
 function playGame() {
@@ -41,3 +52,10 @@ function playGame() {
 }
 
 playGame();
+
+console.log(`Cumputer Score: ${computerScore}\n Human Score ${humanScore}`);
+
+if (humanScore > computerScore)
+console.log(`Human Wins`)
+else
+console.log("Computer Wins")
