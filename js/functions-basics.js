@@ -165,7 +165,7 @@ let newPurchase = 1500;   // مشتريات اليوم
 
 // دالة حساب الإجمالي
 function calculateTotalDebt(oldAmount, newAmount) {
-  let total = oldAmount - newAmount;
+  let total = oldAmount + newAmount;
   return total;
 }
 
