@@ -158,3 +158,17 @@ function calculateDebt(oldDebt, newPurchase) {
 // 3. تأكيد الحفظ
 let saveRecord = "تم حفظ الدين في السجل بنجاح";
 saveRecord;
+// ---------------------------------------fix Logic Error
+// بيانات العميل القادمة من النظام
+let oldDebt = 5000;       // الدين القديم
+let newPurchase = 1500;   // مشتريات اليوم
+
+// دالة حساب الإجمالي
+function calculateTotalDebt(oldAmount, newAmount) {
+  let total = oldAmount - newAmount;
+  return total;
+}
+
+// تشغيل الدالة وطباعة الفاتورة
+let finalDebt = calculateTotalDebt(oldDebt, newPurchase);
+console.log("إجمالي الديون المطلوبة من العميل: " + finalDebt + " ريال");
