@@ -26,8 +26,7 @@ function increaseComputerScore() {
 }
 function increaseForBoth() {
     console.log ("It'sDraw");
-    computerScore +=1;
-    humanScore +=1;
+    computerScore +=1, humanScore +=1;
 }
 
 function playRound(human , computer) {
@@ -47,7 +46,7 @@ function playRound(human , computer) {
 function playGame() {
     for(let i=1;i<=5;i++)
     {
-        console.log(playRound(getHumanChoice(),getComputerChoice()));
+        playRound(getHumanChoice(),getComputerChoice());
     }
     console.log(`Computer Score: ${computerScore}\n Human Score ${humanScore}`);
     
