@@ -32,3 +32,12 @@ function playRound(human , computer) {
     else
         return "copmuter Wins"
 }
+
+function playGame() {
+    for(i=1;i<=5;i++)
+    {
+        console.log(playRound(getHumanChoice(),getComputerChoice()));
+    }
+}
+
+playGame();
