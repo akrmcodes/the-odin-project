@@ -124,3 +124,23 @@ let resultA = addNumbersA(5, 5);
 let finalA = resultA * 2;
 
 console.log(finalA)
+
+
+// -------------------------------------FizBuzz
+let num =5;
+for(i=0 ; i<=num ; i++) {
+if (num % 5 == 0 && num % 3==0)
+{
+  console.log("FizzBuzz")
+}
+else if (num % 3==0)
+{
+  console.log('Fizz')
+}
+else if (num % 5==0) {
+console.log('Buzz')
+}
+else {
+    console.log(i);
+}
+}
