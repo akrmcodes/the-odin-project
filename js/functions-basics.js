@@ -128,7 +128,7 @@ console.log(finalA)
 
 // -------------------------------------FizBuzz
 let num =5;
-for(i=0 ; i<=num ; i++) {
+for(i=1 ; i<=num ; i++) {
 if (num % 5 == 0 && num % 3==0)
 {
   console.log("FizzBuzz")
