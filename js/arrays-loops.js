@@ -26,9 +26,8 @@ console.log("الإجمالي السليم المعتمد: " + finalResult);
 // -------------------------------------------
 const todayDebts = [1500, 0, 3000, 0, 5000];
 
-const activeDebts = todayDebts.filter (debt => debt > 0);
-
-const updatedDebts = activeDebts.map(debt => debt + 200);
+const updatedDebts = todayDebts
+    .filter(debt => debt > 0)
+    .map(debt => debt + 200);
 
 console.log(updatedDebts);
-console.log(activeDebts);
