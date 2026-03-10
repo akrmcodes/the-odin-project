@@ -26,7 +26,8 @@ function increaseComputerScore() {
 }
 function increaseForBoth() {
     console.log ("It'sDraw");
-    computerScore +=1, humanScore +=1;
+    computerScore +=1;
+    humanScore +=1;
 }
 
 function playRound(human , computer) {
@@ -36,15 +37,15 @@ function playRound(human , computer) {
     human === 'rock' && computer === 'scissors';
     const draw = human === computer;
     if (draw)
-        return increaseForBoth()
+        return increaseForBoth();
     else if (humanWin)
-        return increaseHumanScore()
+        return increaseHumanScore();
     else
-        return increaseComputerScore()
+        return increaseComputerScore();
 }
-
+const gameRepeat = 5;
 function playGame() {
-    for(let i=1;i<=5;i++)
+    for(let i=1;i<=gameRepeat;i++)
     {
         playRound(getHumanChoice(),getComputerChoice());
     }
