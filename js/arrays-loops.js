@@ -28,7 +28,7 @@ const todayDebts = [1500, 0, 3000, 0, 5000];
 
 const activeDebts = todayDebts.filter (debt => debt > 0);
 
-const updatedDebts = todayDebts.map(debt => debt + 200);
+const updatedDebts = activeDebts.map(debt => debt + 200);
 
 console.log(updatedDebts);
 console.log(activeDebts);
