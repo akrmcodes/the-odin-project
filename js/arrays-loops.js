@@ -96,3 +96,12 @@ let finalDebt = weeklyDebts.reduce((total , currentDebt) => total + currentDebt 
 let ara = [1500, 200, 5000];
 
 let sms = ara.join(" - ");
+// ----------------------------------------
+let numbers = [1, 2, 3, 4, 5, 6];
+
+let debtResult = numbers
+                .filter(debt => debt %2 === 0)
+                .map(debt => debt * 3)
+                .reduce((total,current)=>total+current,0);
+
+console.log(debtResult);
