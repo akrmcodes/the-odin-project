@@ -92,3 +92,7 @@ let finalDebtResult = weeklyDebts.reduce(function (total , currentDebt){
 }, 0);
 
 let finalDebt = weeklyDebts.reduce((total , currentDebt) => total + currentDebt ,0);
+
+let ara = [1500, 200, 5000];
+
+let sms = ara.join(" - ");
