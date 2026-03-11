@@ -31,3 +31,17 @@ const updatedDebts = todayDebts
     .map(debt => debt + 200);
 
 console.log(updatedDebts);
+// -----------------------------------
+
+function acceptDebt () {
+    let number = +prompt("enter the dept: it shoud be more than 100",90)
+    return number;
+}
+let debt = acceptDebt();
+
+let minimumDebt = 100;
+
+while (debt < minimumDebt && debt != null && debt !=""){
+    console.log("try again");
+    debt = acceptDebt();
+}
