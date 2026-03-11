@@ -33,30 +33,37 @@ const updatedDebts = todayDebts
 console.log(updatedDebts);
 // -----------------------------------
 
-function acceptDebt () {
-    let number = +prompt("enter the dept: it shoud be more than 100",90)
-    return number;
-}
-let debt = acceptDebt();
+// function acceptDebt () {
+//     let number = +prompt("enter the dept: it shoud be more than 100",90)
+//     return number;
+// }
+// let debt = acceptDebt();
 
-let minimumDebt = 100;
+// let minimumDebt = 100;
 
-while (debt < minimumDebt && debt != null && debt !=""){
-    console.log("try again");
-    debt = acceptDebt();
-}
+// while (debt < minimumDebt && debt != null && debt !=""){
+//     console.log("try again");
+//     debt = acceptDebt();
+// }
 
-// ----------------------------------------------- Ai solution
-let inputDebt; // 1. نعرف المتغير في الخارج ليكون متاحاً للشرط
+// // ----------------------------------------------- Ai solution
+// let inputDebt; // 1. نعرف المتغير في الخارج ليكون متاحاً للشرط
 
-do {
-  // 2. نسأل المستخدم ونحفظ النتيجة مباشرة في المتغير
-  inputDebt = prompt("أدخل مبلغ التسديد (يجب أن يكون أكبر من 100):", "");
+// do {
+//   // 2. نسأل المستخدم ونحفظ النتيجة مباشرة في المتغير
+//   inputDebt = prompt("أدخل مبلغ التسديد (يجب أن يكون أكبر من 100):", "");
   
-  // 3. العجلة ستستمر في الدوران (تعيد إظهار النافذة) طالما أن الشرطين يتحققان:
-  // - الرقم المدخل أقل من أو يساوي 100
-  // - والمستخدم لم يضغط على "إلغاء" (لأن إلغاء تعني null)
-  // - والمستخدم لم يترك المربع فارغاً
-} while (inputDebt <= 100 && inputDebt !== null && inputDebt !== "");
+//   // 3. العجلة ستستمر في الدوران (تعيد إظهار النافذة) طالما أن الشرطين يتحققان:
+//   // - الرقم المدخل أقل من أو يساوي 100
+//   // - والمستخدم لم يضغط على "إلغاء" (لأن إلغاء تعني null)
+//   // - والمستخدم لم يترك المربع فارغاً
+// } while (inputDebt <= 100 && inputDebt !== null && inputDebt !== "");
 
-console.log("تمت العملية بنجاح! القيمة النهائية هي: " + inputDebt);
+// console.log("تمت العملية بنجاح! القيمة النهائية هي: " + inputDebt);
+// ----------------------------------------------------------
+let yesterdayDebts = [1000, 2500, 500, 4000, 150];
+yesterdayDebts.length =2;
+
+for(const debt of yesterdayDebts){
+    console.log(debt);
+}
