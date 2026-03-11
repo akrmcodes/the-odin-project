@@ -67,3 +67,20 @@ yesterdayDebts.length =2;
 for(const debt of yesterdayDebts){
     console.log(debt);
 }
+// --------------------------------------------------------------------
+let weeklyDebts = [2000, 4000, 1500, 4000, 2500];
+ 
+weeklyDebts.splice(1,1, 2000,2000);
+console.log(weeklyDebts);
+
+let lastThree = weeklyDebts.slice(-3);
+console.log(lastThree);
+
+let sortedDebts = weeklyDebts.sort().reverse();
+console.log(sortedDebts);
+
+let result =0;
+for(let i=0 ;i<=weeklyDebts.length-1;i++){
+        result += weeklyDebts[i];
+}
+console.log(result)
