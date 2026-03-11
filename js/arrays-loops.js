@@ -79,8 +79,16 @@ console.log(lastThree);
 let sortedDebts = weeklyDebts.sort().reverse();
 console.log(sortedDebts);
 
+let newSortedDebts = weeklyDebts.sort((a,b) => b-a);
+
 let result =0;
 for(let i=0 ;i<=weeklyDebts.length-1;i++){
         result += weeklyDebts[i];
 }
 console.log(result)
+
+let finalDebtResult = weeklyDebts.reduce(function (total , currentDebt){
+    return total + currentDebt;
+}, 0);
+
+let finalDebt = weeklyDebts.reduce((total , currentDebt) => total + currentDebt ,0);
